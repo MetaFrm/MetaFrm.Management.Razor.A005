@@ -1,3 +1,29 @@
-﻿<div class="my-component">
-    This component is defined in the <strong>MetaFrm.Management.Razor.A005_net6._0_</strong> library.
+﻿@using MetaFrm.Control
+@using MetaFrm.Razor.Field
+@using MetaFrm.Razor.Group
+@using MetaFrm.Razor.Title
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@inherits BaseComponent
+
+<div>
+    <TitleControl Title="@this.GetAttribute("Description")"></TitleControl>
+
+    <GroupControl TItem="MetaFrm.Management.Razor.ViewModels.A005ViewModel" HeaderEditString="ImageBase64Data" HeaderNewString="ImageBase64Data" InnerContainer="true">
+        <Control>
+            <FieldControl Label="JPG/PNG File">
+                <Control>
+                    <InputFile class="form-control" placeholder="JPG/PNG File" OnChange="this.InputFileChangeEventArgs" /><br />
+                    <img class="figure-img" alt="JPG/PNG Image" src="@this.ImageBase64Data" />
+                    <img class="figure-img rounded-pill" width="30" height="30" alt="JPG/PNG Image User" src="@this.ImageBase64Data" /><br />
+                    Bytes Length : @(this.ImageBytes.ToString("###,###,##0"))<br />
+                    File : @(this.DllFile != null ? this.DllFile.Name : "")<br />
+                    ImageBase64Data Length : @(this.ImageBase64Data != null ? this.ImageBase64Data.Length.ToString("###,###,##0") : "")<br />
+                    <textarea id="imagebase64data p-2" class="form-control" rows="30" style="height: 200px;" placeholder="ImageBase64Data">@this.ImageBase64Data</textarea>
+                </Control>
+            </FieldControl>
+        </Control>
+    </GroupControl>
 </div>
