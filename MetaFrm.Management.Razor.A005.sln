@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.32804.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaFrm.Management.Razor.A005(net6.0)", "MetaFrm.Management.Razor.A005(net6.0)\MetaFrm.Management.Razor.A005(net6.0).csproj", "{53767085-BB70-41DB-B73C-C877F3AA0B48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{117B6CCF-053E-4A0F-97D3-03C7457337C4}"
+	ProjectSection(SolutionItems) = preProject
+		src\A005.razor.cs = src\A005.razor.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", "{D7C864B2-BDC7-4EEC-8A12-2F176F841713}"
+	ProjectSection(SolutionItems) = preProject
+		src\ViewModels\A005ViewModel.cs = src\ViewModels\A005ViewModel.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{D13E7EB3-1A9B-44ED-A910-30376674B9C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{9554D26F-F821-41A2-A5F1-F55D7BB8F5D3}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build.yml = .github\workflows\build.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53767085-BB70-41DB-B73C-C877F3AA0B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53767085-BB70-41DB-B73C-C877F3AA0B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53767085-BB70-41DB-B73C-C877F3AA0B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53767085-BB70-41DB-B73C-C877F3AA0B48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7C864B2-BDC7-4EEC-8A12-2F176F841713} = {117B6CCF-053E-4A0F-97D3-03C7457337C4}
+		{9554D26F-F821-41A2-A5F1-F55D7BB8F5D3} = {D13E7EB3-1A9B-44ED-A910-30376674B9C4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {272CD717-F268-4E08-9610-163998F24315}
+	EndGlobalSection
+EndGlobal
