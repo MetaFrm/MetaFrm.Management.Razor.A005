@@ -9,7 +9,7 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <PackageId>MetaFrm.Management.Razor.A005.net6.0</PackageId>
     <Title>MetaFrm.Management.Razor.A005</Title>
-    <Version>6.0.0.7</Version>
+    <Version>6.0.0.8</Version>
     <Authors>dsun</Authors>
     <Company>Meta Framework</Company>
     <Product>MetaFrm.Management.Razor.A005</Product>
@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MetaFrm.Razor.Essentials.net6.0" Version="6.0.0.13" />
+    <PackageReference Include="MetaFrm.Razor.Essentials.net6.0" Version="6.0.0.16" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.9" />
   </ItemGroup>
 
