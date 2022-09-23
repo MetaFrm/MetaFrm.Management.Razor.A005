@@ -1,4 +1,5 @@
 ﻿@using MetaFrm.Control
+@using MetaFrm.Management.Razor.ViewModels
 @using MetaFrm.Razor.Essentials
 @using Microsoft.AspNetCore.Components.Authorization
 @using Microsoft.AspNetCore.Components.Forms
@@ -8,9 +9,10 @@
 
 <TitleControl Title="@this.GetAttribute("Description")"></TitleControl>
 
-<CardControl CssClass="border-primary mb-2" HeaderText="ImageBase64Data">
+<CardControl TItem="A005ViewModel" HeaderText="ImageBase64Data"
+             CssClass="card bg-dark">
     <Text>
-        <FieldControl Label="JPG/PNG File">
+        <FieldControl Label="JPG/PNG File" CssClassAppend="py-2 col-md-12">
             <Control>
                 <InputFile class="form-control" placeholder="JPG/PNG File" OnChange="this.InputFileChangeEventArgs" /><br />
                 <img class="figure-img" alt="JPG/PNG Image" src="@this.ImageBase64Data" />
