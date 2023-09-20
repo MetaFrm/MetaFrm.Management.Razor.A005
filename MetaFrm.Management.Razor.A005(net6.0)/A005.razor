@@ -9,18 +9,49 @@
 
 <TitleControl Title="@this.GetAttribute("Description")"></TitleControl>
 
-<CardControl TItem="A005ViewModel" HeaderText="ImageBase64Data"
-             CssClass="card bg-dark">
+<CardControl TItem="A005ViewModel" HeaderText="AesEncrypt / AesDecrypt" CssClass="card bg-dark">
     <Text>
-        <FieldControl Label="JPG/PNG File" CssClassAppend="py-2 col-md-12">
+        <FieldControl Label="Key" CssClassAppend="py-2 col-12">
             <Control>
-                <InputFile class="form-control" placeholder="JPG/PNG File" OnChange="this.InputFileChangeEventArgs" /><br />
-                <img class="figure-img" alt="JPG/PNG Image" src="@this.ImageBase64Data" />
-                <img class="figure-img rounded-pill" width="30" height="30" alt="JPG/PNG Image User" src="@this.ImageBase64Data" /><br />
-                Bytes Length : @(this.ImageBytes.ToString("###,###,##0"))<br />
-                File : @(this.DllFile != null ? this.DllFile.Name : "")<br />
-                ImageBase64Data Length : @(this.ImageBase64Data != null ? this.ImageBase64Data.Length.ToString("###,###,##0") : "")<br />
-                <textarea id="imagebase64data p-2" class="form-control" rows="30" style="height: 200px;" placeholder="ImageBase64Data">@this.ImageBase64Data</textarea>
+                <input type="text" class="form-control" placeholder="Key" @bind="this.A005ViewModel.FirebaseAdminServiceAesEncryptKey" />
+            </Control>
+        </FieldControl>
+        <FieldControl Label="IV" CssClassAppend="py-2 col-12">
+            <Control>
+                <input type="text" class="form-control" placeholder="IV" @bind="this.A005ViewModel.FirebaseAdminServiceAesEncryptIV" />
+            </Control>
+        </FieldControl>
+
+        <FieldControl Label="File" CssClassAppend="py-2 col-md-12">
+            <Control>
+                <InputFile class="form-control" placeholder="File" OnChange="this.JsonInputFileChangeEventArgs" />
+                <textarea id="aesencryptstring1" class="form-control mb-1 mt-1" rows="30" style="height: 200px;" placeholder="AesEncrypt String 1 (Max length 4000)" @bind="@this.A005ViewModel.FirebaseAdminServiceAesEncryptString1"></textarea>
+                <textarea id="aesencryptstring2" class="form-control" rows="30" style="height: 200px;" placeholder="AesEncrypt String 2" @bind="@this.A005ViewModel.FirebaseAdminServiceAesEncryptString2"></textarea>
+                <div class="col-12 mt-1">
+                    <h4 class="float-start">Total Length : @(this.A005ViewModel.FirebaseAdminServiceAesEncryptString.Length.ToString("###,###,##0"))</h4>
+                    <button type="button" class="btn btn-outline-primary me-1 float-end" @onclick="this.OnAesDecryptClick"><span class="oi oi-caret-bottom"></span> AesDecrypt</button>
+                </div>
+                <textarea id="aesdecryptstring2" class="form-control mt-5" rows="30" style="height: 200px;" placeholder="AesDecrypt String" @bind="@this.A005ViewModel.FirebaseAdminServiceAesDecryptString"></textarea>
+                <div class="col-12 mt-1">
+                    <h4 class="float-start">Length : @(this.A005ViewModel.FirebaseAdminServiceAesDecryptString.Length.ToString("###,###,##0"))</h4>
+                    <button type="button" class="btn btn-outline-primary me-1 float-end" @onclick="this.OnAesEncryptClick"><span class="oi oi-caret-top"></span> AesEncrypt</button>
+                </div>
+            </Control>
+        </FieldControl>
+    </Text>
+</CardControl>
+
+<CardControl TItem="A005ViewModel" HeaderText="ImageBase64Data" CssClass="card bg-dark mt-4">
+    <Text>
+        <FieldControl Label="JPG/PNG File" CssClassAppend="py-2 col-12">
+            <Control>
+                <InputFile class="form-control" placeholder="JPG/PNG File" OnChange="this.InputFileChangeEventArgs" />
+                <img class="float-start pe-3 pt-1 pb-1" alt="JPG/PNG Image" src="@this.A005ViewModel.ImageBase64Data" />
+                <img class="img-thumbnail rounded-pill mt-1" width="100" height="100" alt="JPG/PNG Image User" src="@this.A005ViewModel.ImageBase64Data" />
+                <h5>Bytes Length : @this.A005ViewModel.ImageBytes.ToString("###,###,##0")</h5>
+                <h5>File : @(this.A005ViewModel.DllFile != null ? this.A005ViewModel.DllFile.Name : "")</h5>
+                <h5>ImageBase64Data Length : @(this.A005ViewModel.ImageBase64Data != null ? this.A005ViewModel.ImageBase64Data.Length.ToString("###,###,##0") : "")</h5>
+                <textarea id="imagebase64data" class="form-control" rows="30" style="height: 200px;" placeholder="ImageBase64Data">@this.A005ViewModel.ImageBase64Data</textarea>
             </Control>
         </FieldControl>
     </Text>
