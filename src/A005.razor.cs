@@ -62,7 +62,7 @@ namespace MetaFrm.Management.Razor
 
             if (this.A005ViewModel.FirebaseAdminServiceAesEncryptString.Length < 5)
             {
-                this.ToastShow("AesEncrypt String을 5자리 이상 입력하세요.");
+                this.ToastShow("Aes 암호화 문자열을 5자리 이상 입력하세요.");
                 return;
             }
 
@@ -91,7 +91,7 @@ namespace MetaFrm.Management.Razor
 
             if (this.A005ViewModel.FirebaseAdminServiceAesDecryptString.Length < 5)
             {
-                this.ToastShow("AesDecrypt String을 5자리 이상 입력하세요.");
+                this.ToastShow("Aes 복호화 문자열을 5자리 이상 입력하세요.");
                 return;
             }
 
