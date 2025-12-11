@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>MetaFrm.Management.Razor</RootNamespace>
     <AssemblyName>MetaFrm.Management.Razor.A005</AssemblyName>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-    <PackageId>MetaFrm.Management.Razor.A005.net6.0</PackageId>
+    <PackageId>MetaFrm.Management.Razor.A005.net10.0</PackageId>
     <Title>MetaFrm.Management.Razor.A005</Title>
-    <Version>6.0.3.3</Version>
+    <Version>10.0.0.0</Version>
     <Authors>dsun</Authors>
     <Company>Meta Framework</Company>
     <Product>MetaFrm.Management.Razor.A005</Product>
     <Description>Meta Framework
 (Multi platform &amp; Meta management)</Description>
-    <Copyright>Copyright 2023. dsun all rights reserved.</Copyright>
+    <Copyright>Copyright 2026. dsun all rights reserved.</Copyright>
     <PackageProjectUrl>https://github.com/MetaFrm/MetaFrm.Management.Razor.A005</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/MetaFrm/MetaFrm.Management.Razor.A005</RepositoryUrl>
@@ -41,8 +41,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MetaFrm.Razor.Essentials.net6.0" Version="6.0.3.30" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.32" />
+    <PackageReference Include="MetaFrm.Razor.Essentials.net10.0" Version="10.0.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0" />
   </ItemGroup>
 
   <ItemGroup>
